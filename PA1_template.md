@@ -157,10 +157,10 @@ nrow(activity_na)
 
 ```r
 # get mean average number of steps averaged across all days in interval from 
-# previous steps
+# previous steps and use this number for imputing missing value
 mean_interval <- mean(steps_interval$steps)
 
-# create new dataset by imputing missing value with mean value
+# create new dataset and update missing value with the mean value
 activity_imputed <- data
 activity_imputed[is.na(activity_imputed)] <- mean_interval
 
